@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d2a1e">
+  <meta name="description" content="Karaköy Güllüoğlu müşteri görüşü ve sorun bildirimi.">
+  <title>Görüşünü paylaş · Karaköy Güllüoğlu</title>
+  <link rel="icon" href="assets/karakoy-gulluoglu-logo.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="feedback">
+  <div class="app-shell">
+    <header class="topbar inner-topbar">
+      <a class="back-link" href="index.html" aria-label="Ana sayfaya dön">‹</a>
+      <div class="page-title"><span>SENİ DİNLİYORUZ</span><strong>Görüşünü paylaş</strong></div>
+      <div class="year-pill">1843</div>
+    </header>
+    <main class="page-content feedback-page">
+      <section class="feedback-hero">
+        <span class="eyebrow gold">BİZİM İÇİN DEĞERLİ</span>
+        <h1>YEMEĞİN<br>NASILDI?</h1>
+        <h2>Önce bize söyle.</h2>
+        <p>Memnun kalmadıysan herkese açık yorumdan önce bize bildirebilirsin.</p>
+        <div class="feedback-hero-mark">1843</div>
+      </section>
+      <form id="mealFeedbackForm" class="feedback-form">
+        <div class="form-section-heading"><span>01</span><div><strong>Deneyimini puanla</strong><small>Nasıl hissettirdi?</small></div></div>
+        <div class="rating-stars" id="ratingStars" role="group" aria-label="Bir ile beş arasında puan ver">
+          <button type="button" data-score="1" aria-label="1 yıldız">★</button><button type="button" data-score="2" aria-label="2 yıldız">★</button><button type="button" data-score="3" aria-label="3 yıldız">★</button><button type="button" data-score="4" aria-label="4 yıldız">★</button><button type="button" data-score="5" aria-label="5 yıldız">★</button>
+        </div>
+        <div class="rating-caption" id="ratingCaption">Puan vermek için yıldızlara dokun.</div>
+        <div class="form-section-heading compact-heading"><span>02</span><div><strong>Neyi değerlendirmek istersin?</strong><small>Birden fazla seçebilirsin.</small></div></div>
+        <div class="choice-chips" id="mealTopics"><button type="button">Lezzet</button><button type="button">Sunum</button><button type="button">Sıcaklık</button><button type="button">Tazelik</button><button type="button">Porsiyon</button><button type="button">Servis</button></div>
+        <label class="field-label" for="mealMessage">Bize anlatmak istediğin bir şey var mı?</label>
+        <textarea class="form-control message-box" id="mealMessage" maxlength="700" rows="4" placeholder="Görüşünü buraya yazabilirsin…"></textarea>
+        <button class="primary-button full" type="submit">Görüşümü gönder <span>→</span></button>
+      </form>
+
+      <section class="problem-report-section">
+        <div class="problem-heading"><span class="problem-mark">!</span><div><span class="eyebrow green">DAHA CİDDİ BİR KONU MU VAR?</span><h2>Sorun bildir</h2><p>Yaşadığın durumu doğrudan bize anlat.</p></div></div>
+        <form id="problemForm" class="problem-form">
+          <label class="field-label" for="problemType">Konu</label>
+          <select class="form-control" id="problemType"><option value="">Bir konu seç</option><option>Siparişimle ilgili</option><option>Ürün kalitesi</option><option>Temizlik / hijyen</option><option>Çalışan iletişimi</option><option>Diğer</option></select>
+          <label class="field-label" for="problemMessage">Mesajın</label>
+          <textarea class="form-control message-box" id="problemMessage" maxlength="1000" rows="4" placeholder="Ne yaşadığını kısaca anlat…" required></textarea>
+          <button class="outline-button full" type="submit">Sorun bildirimi oluştur <span>→</span></button>
+        </form>
+      </section>
+      <p class="demo-disclaimer">Demo notu: Gönderimler şu an yalnızca bu tarayıcıda saklanır; işletmeye canlı bildirim ulaşmaz. Gerçek iletim için güvenli sunucu bağlantısı gerekir.</p>
+      <footer class="site-footer"><span>1843 · NADİR GÜLLÜ</span><small>Gelenekten geleceğe.</small></footer>
+    </main>
+    <nav class="bottom-nav" aria-label="Alt menü">
+      <a href="index.html" class="nav-item"><span>⌂</span><small>Ana Sayfa</small></a>
+      <a href="menu.html" class="nav-item"><span>☷</span><small>Menü</small></a>
+      <a href="games.html" class="nav-item"><span>✦</span><small>Oyun</small></a>
+      <a href="loyalty.html" class="nav-item"><span>♧</span><small>Kulüp</small></a>
+      <a href="feedback.html" class="nav-item active"><span>♡</span><small>Görüş</small></a>
+    </nav>
+  </div>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

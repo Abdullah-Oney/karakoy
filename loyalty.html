@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d2a1e">
+  <meta name="description" content="Güllü Kulübü dijital sadakat kartı.">
+  <title>Güllü Kulübü · Karaköy Güllüoğlu</title>
+  <link rel="icon" href="assets/karakoy-gulluoglu-logo.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="loyalty">
+  <div class="app-shell">
+    <header class="topbar inner-topbar">
+      <a class="back-link" href="index.html" aria-label="Ana sayfaya dön">‹</a>
+      <div class="page-title"><span>GÜLLÜ KULÜBÜ</span><strong>Sadakat kartın</strong></div>
+      <div class="year-pill">1843</div>
+    </header>
+    <main class="page-content loyalty-page">
+      <section class="page-intro"><span class="eyebrow green">HER ZİYARETTE BİR ADIM</span><h1>Lezzet yolculuğun.</h1><p>İlk iki adım bizden. 6 defa daha gel, soğuk baklava senin.</p></section>
+      <section class="loyalty-entry-card">
+        <div class="loyalty-entry-icon">♧</div>
+        <div><strong>Kulüp kartını görüntüle</strong><small>Müşteri numaranı gir, kaldığın yerden devam et.</small></div>
+      </section>
+      <form class="loyalty-form" id="loyaltyForm">
+        <label class="field-label" for="customerId">Müşteri numarası / kart ID</label>
+        <div class="id-entry-row"><input class="form-control" id="customerId" type="text" maxlength="32" placeholder="Örn. GULLU-1024" autocomplete="off" required><button class="primary-button" type="submit">Kartımı göster</button></div>
+      </form>
+      <section class="loyalty-card" id="loyaltyCard" hidden>
+        <div class="loyalty-card-top"><div><span class="club-mini-label">KARAKÖY GÜLLÜOĞLU</span><h2>Güllü Kulübü</h2></div><div class="club-year">1843</div></div>
+        <div class="loyalty-card-middle"><span>MERHABA, <strong id="loyaltyCustomerName">KULÜP ÜYESİ</strong></span><small>SOĞUK BAKLAVA YOLCULUĞUN</small></div>
+        <div class="stamp-grid" id="stampGrid" aria-label="Sekiz adımlı sadakat kartı"></div>
+        <div class="loyalty-progress"><strong><span id="stampCount">2</span><small> / 8 ADIM</small></strong><span id="remainingVisits">Ödüle 6 ziyaret kaldı</span></div>
+        <div class="loyalty-reward"><span class="reward-star">✦</span><div><small>HEDEF ÖDÜLÜN</small><strong>1 adet soğuk baklava</strong></div><span class="reward-check">✧</span></div>
+        <div class="loyalty-card-footer"><span>İLK 2 ADIM BİZDEN</span><span>NADİR GÜLLÜ · 1843</span></div>
+      </section>
+      <div class="loyalty-explain" id="loyaltyExplain" hidden><span>✦</span><p>İlk iki adımın sana bizden. Kalan ziyaretlerinde işletme tarafından kartına damga eklenecek.</p></div>
+      <section class="loyalty-howto"><span class="eyebrow green">NASIL ÇALIŞIR?</span><div class="howto-row"><span>01</span><p>Müşteri numaranı girerek kartını görüntüle.</p></div><div class="howto-row"><span>02</span><p>İlk iki adım kartına otomatik olarak tanımlanır.</p></div><div class="howto-row"><span>03</span><p>Altı ziyaret daha tamamlandığında ödülün soğuk baklava olur.</p></div></section>
+      <p class="demo-disclaimer">Demo notu: Kart bilgisi bu tarayıcıda saklanır. Ziyaret damgalarının güvenli biçimde eklenmesi için işletme paneli ve sunucu bağlantısı gerekir.</p>
+      <footer class="site-footer"><span>1843 · NADİR GÜLLÜ</span><small>Gelenekten geleceğe.</small></footer>
+    </main>
+    <nav class="bottom-nav" aria-label="Alt menü">
+      <a href="index.html" class="nav-item"><span>⌂</span><small>Ana Sayfa</small></a>
+      <a href="menu.html" class="nav-item"><span>☷</span><small>Menü</small></a>
+      <a href="games.html" class="nav-item"><span>✦</span><small>Oyun</small></a>
+      <a href="loyalty.html" class="nav-item active"><span>♧</span><small>Kulüp</small></a>
+      <a href="feedback.html" class="nav-item"><span>♡</span><small>Görüş</small></a>
+    </nav>
+  </div>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

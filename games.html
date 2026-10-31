@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d2a1e">
+  <meta name="description" content="Karaköy Güllüoğlu Akıllı Masa oyunları.">
+  <title>Oyunlar · Karaköy Güllüoğlu</title>
+  <link rel="icon" href="assets/karakoy-gulluoglu-logo.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="games">
+  <div class="app-shell">
+    <header class="topbar inner-topbar">
+      <a class="back-link" href="index.html" aria-label="Ana sayfaya dön">‹</a>
+      <div class="page-title"><span>BEKLERKEN EĞLEN</span><strong>Tatlı oyunlar</strong></div>
+      <div class="year-pill">1843</div>
+    </header>
+    <main class="page-content games-page">
+      <section class="page-intro games-intro"><span class="eyebrow green">KÜÇÜK BİR MOLA</span><h1>Şimdi oyun zamanı.</h1><p>Biraz tatlı eşleştir, sonra arkadaşlarınla çarkı çevir.</p></section>
+      <div class="game-mode-tabs" role="tablist" aria-label="Oyun seçimi">
+        <button class="game-tab active" data-game-mode="match" type="button" role="tab" aria-selected="true"><span>✦</span> Tatlı Eşleştirme</button>
+        <button class="game-tab" data-game-mode="wheel" type="button" role="tab" aria-selected="false"><span>◉</span> Arkadaş Çarkı</button>
+      </div>
+
+      <section class="game-panel active" id="mode-match" role="tabpanel">
+        <div class="game-panel-heading"><div><span class="eyebrow gold">TATLI CRUSH</span><h2>Üç tatlıyı yan yana getir.</h2></div><button class="icon-action" id="matchRestart" type="button" aria-label="Oyunu yeniden başlat">↻</button></div>
+        <p class="game-instruction">Bir tatlıyı parmağınla sürükleyip yanındakiyle yer değiştir. Aynı üç lezzeti yatay veya dikey eşleştir.</p>
+        <div class="match-score-row">
+          <div class="score-box"><small>PUAN</small><strong id="matchScore">0</strong></div>
+          <div class="score-box"><small>HAMLE</small><strong id="matchMoves">25</strong></div>
+          <div class="score-box target-score"><small>HEDEF</small><strong>600</strong></div>
+        </div>
+        <div class="match-board-frame"><div class="match-grid" id="matchGrid" aria-label="Tatlı eşleştirme oyun tahtası"></div></div>
+        <div class="match-message" id="matchMessage" aria-live="polite">Başlamak için yan yana duran iki tatlıyı değiştir.</div>
+        <div class="game-legend"><span><i class="legend-dot baklava-dot"></i> Baklava</span><span><i class="legend-dot cold-dot"></i> Soğuk baklava</span><span><i class="legend-dot kadayif-dot"></i> Kadayıf</span></div>
+      </section>
+
+      <section class="game-panel wheel-panel" id="mode-wheel" role="tabpanel" hidden>
+        <div class="game-panel-heading"><div><span class="eyebrow gold">1843’ÜN ÇARKI</span><h2>Kararı şansa bırak.</h2></div><span class="wheel-seal">1843</span></div>
+        <label class="field-label" for="wheelQuestion">Bugün çark neye karar versin?</label>
+        <select class="form-control" id="wheelQuestion">
+          <option>Çaylar kimden?</option>
+          <option>Soğuk baklavayı kim ısmarlayacak?</option>
+          <option>Tatlıyı kim seçiyor?</option>
+          <option>İlk lokma kimin?</option>
+          <option>Hesabı kim kapatıyor?</option>
+        </select>
+        <div class="participant-heading"><div><strong>Masadakiler</strong><small>Çarka katılacak isimleri ekle.</small></div><span id="participantCount">0 kişi</span></div>
+        <div class="add-player-row"><input class="form-control" id="playerInput" type="text" maxlength="18" placeholder="Bir isim yaz…" autocomplete="off"><button class="add-player-button" id="addPlayer" type="button">Ekle</button></div>
+        <div class="player-chips" id="playerList" aria-live="polite"><span class="empty-player-note">Henüz isim eklenmedi.</span></div>
+        <div class="wheel-stage">
+          <div class="wheel-pointer" aria-hidden="true"></div>
+          <div class="wheel-disc" id="wheelDisc"><div class="wheel-labels" id="wheelLabels"></div><div class="wheel-center"><strong>1843</strong><small>NADİR GÜLLÜ</small></div></div>
+        </div>
+        <button class="primary-button full spin-button" id="spinWheel" type="button" disabled>Çarkı çevir <span>↻</span></button>
+        <div class="wheel-result" id="wheelResult" aria-live="polite" hidden></div>
+        <p class="wheel-footnote">En az iki isim ekle. Çarkın ortasında Karaköy Güllüoğlu’nun 1843 vurgusu yer alır.</p>
+      </section>
+      <footer class="site-footer"><span>1843 · NADİR GÜLLÜ</span><small>Gelenekten geleceğe.</small></footer>
+    </main>
+    <nav class="bottom-nav" aria-label="Alt menü">
+      <a href="index.html" class="nav-item"><span>⌂</span><small>Ana Sayfa</small></a>
+      <a href="menu.html" class="nav-item"><span>☷</span><small>Menü</small></a>
+      <a href="games.html" class="nav-item active"><span>✦</span><small>Oyun</small></a>
+      <a href="loyalty.html" class="nav-item"><span>♧</span><small>Kulüp</small></a>
+      <a href="feedback.html" class="nav-item"><span>♡</span><small>Görüş</small></a>
+    </nav>
+  </div>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
